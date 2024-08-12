@@ -1,0 +1,28 @@
+=== Pontos iniciais a criar:
+
+1. Criar Projeto e APP
+2. Habilitar o app/módulo polls
+3. Criar view (resposta da rota) para app polls
+4. Adicionar as rotas (url para acessar) no polls, crie arquivo urls.py no polls
+5. Inicaizar o servidor de desenvolvimento para testar a rota
+6. Criar template HTML para a rota 
+7. ir em frameworkweb_projeto, na pasta settings, adicionei o diretório templates para subir os templates HTML
+8. Crie um doc HTML no templates para cada uma das páginas (index será a página home/inicial)
+
+(feito até aqui)
+
+-------
+
+=== Configurando os Templates:
+
+OBS: usamos o _ na frente do título para indicar que é o layout parcial,
+    ou seja, não é a página final, mas a base para montar a página e criar constância no nosso projeto
+1. Criar estrutura para reutilização o nosso _base.html (para trabalhar com herança)
+2. Criar template de layout genérico o _layout1.html (será o menu, rodapé, miolo da página, estruturas fixas da página)
+3. Vamos usar o Jinja para criar essa "cola" do layout e usaremos como referência a página templates do Django
+4. Aplicar o layout genérico no template final
+5. Usaremos arquivos estáticos (imagens, CSS) , usar o favicon
+OBS, NO HTML:
+{{ }} = imprime valores de variáveis
+{% %} = executar comandos
+{# #} = comentários
