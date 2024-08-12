@@ -1,0 +1,171 @@
+/* Estilização Global */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Paleta de Cores */
+
+:root {
+    --azulClaro: #64A2CF;
+    --azulEscuro: #38609B;
+    --branco: #fff;
+    --cinza: #EEEEEF;
+    --preto: #000;
+    --rosa: #E061A9;
+    --roxo: #350962;
+}
+
+/* Estilização Main */
+main {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 3%;
+}
+
+main .all {
+    max-width: 1280px;
+    padding: 20px;
+    width: 100%;
+}
+
+main .title {
+    width: 100%;
+    text-align: center;
+}
+
+main .title h1 {
+    font-weight: 700;
+    font-family: Quicksand;
+    font-size: 32px;
+    color: var(--azulClaro);
+}
+
+main .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 50px 0;
+}
+
+main #section-founders,
+#section-activities {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 50px 0;
+}
+
+main .imgArea {
+    width: 45%;
+    /* Largura das imagens em telas maiores */
+}
+
+main .imgArea img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+main .history {
+    width: calc(55% - 30px);
+    /* Largura do texto em telas maiores */
+}
+
+main .subtitle {
+    font-family: Quicksand;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+main .info {
+    font-family: Quicksand;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: justify;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+main ul {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 10px;
+}
+
+main ul li {
+    font-size: 18px;
+    font-family: Quicksand;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+
+    main .all {
+        padding: 0 20px;
+    }
+
+    main .section {
+        flex-direction: column;
+        /* Altera a direção dos elementos em telas menores */
+    }
+
+    main #section-history {
+        margin: 0;
+    }
+
+    main .title h1 {
+        font-size: 24px;
+    }
+
+    main ul li {
+        font-size: 16px;
+    }
+
+    main .info {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    main .subtitle {
+        text-align: center;
+    }
+
+    main #section-founders,
+    #section-activities {
+        flex-direction: column;
+        /* Altera a direção dos elementos em telas menores */
+    }
+
+    main .imgArea,
+    main .history {
+        width: 100%;
+        /* Largura total em telas menores */
+        margin: 0;
+        /* Remove a margem em telas menores */
+    }
+
+    main .imgArea {
+        margin-bottom: 20px;
+        /* Adiciona espaçamento entre as imagens e o texto em telas menores */
+    }
+}
