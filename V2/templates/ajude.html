@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajude</title>
+
+    <!-- Favicon Page -->
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Css Header -->
+    <link rel="stylesheet" href="{% static 'css/layout/header.css' %}">
+
+    <!-- Css Footer -->
+    <link rel="stylesheet" href="{% static 'css/layout/footer.css' %}">
+
+    <!-- Css Página -->
+    <link rel="stylesheet" href="{% static 'css/pages/ajude.css' %}">
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/map.js' %}"></script>
+    <!-- API do Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="logo-area">
+            <img src="{% static 'img/logo.png' %}" id="logo">
+        </div>
+
+        <ul>
+            <a href="index">
+                <li class="nav-item">Home</li>
+            </a>
+            <a href="sobre">
+                <li class="nav-item">Sobre</li>
+            </a>
+            <a href="equipe">
+                <li class="nav-item">Equipe</li>
+            </a>
+            <a href="doacoes_necessarias">
+                <li class="nav-item">Doações Necessárias</li>
+            </a>
+            <a href="voluntario">
+                <li class="nav-item">Torne-se Voluntário</li>
+            </a>
+            <a href="ajude">
+                <li class="nav-item">Ajude</li>
+            </a>
+        </ul>
+    </header>
+    
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <div class="menu-toggle-icon"></div>
+    </button>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="navs">
+            <li><a href="../index" class="nav-item">Home</a></li>
+            <li><a href="sobre" class="nav-item">Sobre</a></li>
+            <li><a href="equipe" class="nav-item">Equipe</a></li>
+            <li><a href="#" class="nav-item">Doações Necessárias</a></li>
+            <li><a href="voluntario" class="nav-item">Torne-se Voluntário</a></li>
+            <li><a href="ajude" class="nav-item">Ajude</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="infoMaps">
+            <p>A Liga Piquetense de Combate ao Câncer é uma organização sem fins lucrativos que depende de doações para continuar suas atividades. 
+                Contamos com uma conta PIX! Doe e ajude-nos a continuar unindo forças para combater o câncer!</p>
+            <span>Telefone: (12) 99704-0497 </span>
+            <span>Endereço: Rua José Salomão, n° 156, centro da cidade de Piquete</span>
+            <div id="map"></div>
+        </div>
+        <div class="infoPix">
+            <div class="imgPix">
+                <img src="{% static 'img/pix.png' %}">
+            </div>
+            <p>Chave Pix: 12 99704-0497</p>
+            <p>Nome: Vera Lucia</p>
+        </div>
+    </main>
+
+    <footer>
+        <button class="btn-redes-sociais">Instagram</button>
+        <button class="btn-redes-sociais">Facebook</button>
+    </footer>
+
+</body>
+
+</html>

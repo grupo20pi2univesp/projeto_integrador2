@@ -1,0 +1,203 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+
+    <!-- Favicon Page -->
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Css Header -->
+    <link rel="stylesheet" href="{% static 'css/layout/header.css' %}">
+
+    <!-- Css Footer -->
+    <link rel="stylesheet" href="{% static 'css/layout/footer.css' %}">
+
+    <!-- Css Página -->
+    <link rel="stylesheet" href="{% static 'css/pages/sobre.css' %}">
+</head>
+
+<body>
+    <header>
+        <div id="logo-area">
+            <img src="{% static 'img/logo.png' %}" id="logo">
+        </div>
+
+        <ul>
+            <a href="index">
+                <li class="nav-item">Home</li>
+            </a>
+            <a href="sobre">
+                <li class="nav-item">Sobre</li>
+            </a>
+            <a href="equipe">
+                <li class="nav-item">Equipe</li>
+            </a>
+            <a href="doacoes_necessarias">
+                <li class="nav-item">Doações Necessárias</li>
+            </a>
+            <a href="voluntario">
+                <li class="nav-item">Torne-se Voluntário</li>
+            </a>
+            <a href="ajude">
+                <li class="nav-item">Ajude</li>
+            </a>
+        </ul>
+    </header>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <div class="menu-toggle-icon"></div>
+    </button>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="navs">
+            <li><a href="../index" class="nav-item">Home</a></li>
+            <li><a href="sobre" class="nav-item">Sobre</a></li>
+            <li><a href="equipe" class="nav-item">Equipe</a></li>
+            <li><a href="#" class="nav-item">Doações Necessárias</a></li>
+            <li><a href="voluntario" class="nav-item">Torne-se Voluntário</a></li>
+            <li><a href="ajude" class="nav-item">Ajude</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="title">
+            <h1>História da Liga Piquetense de Combate ao Câncer</h1>
+        </div>
+        <div class="all">
+            <div class="section" id="section-history">
+                <div class="imgArea">
+                    <img src="{% static 'img/img2.jpg' %}" alt="">
+                </div>
+                <div class="history">
+                    <h2 class="subtitle">Como surgiu a Liga Piquetense de Combate ao Câncer</h2>
+                    <p class="info">No dia 31 de agosto de 2000, foi criada a Liga Piquetense de Combate ao Câncer,
+                        inspirada pelo
+                        trabalho da mulher extraordinária Carmen Prudente, criadora da Liga Feminina de Combate ao
+                        Câncer.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section" id="section-founders">
+                <div class="imgArea">
+                    <img src="{% static 'img/image3.jpg' %}" alt="">
+                </div>
+                <div class="history">
+                    <h2 class="subtitle">Fundadoras</h2>
+                    <p class="info">As fundadoras: Vera Aparecida, Angela Rosa Giffoni, Maria Aparecida da Silva,
+                        Sebastiana
+                        Botelho,
+                        Maria Vicentina e Marlene Maria, juntamente de outras mulheres da cidade de Piquete (localizada
+                        no
+                        interior de São Paulo), decidiram trazer essa iniciativa para os cidadãos interioranos que
+                        buscam
+                        auxílio ao se depararem com o diagnóstico de câncer.
+                    </p>
+                    <p class="info">No dia 31 de março de 2001, foi recebida a aprovação do Estatuto Social (documento
+                        essencial para a
+                        constituição de certas pessoas jurídicas), e foi constituída de forma definitiva a associação.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section" id="section-actions">
+                <div class="imgArea">
+                    <img src="{% static 'img\image.png' %}" alt="">
+                </div>
+                <div class="history">
+                    <h2 class="subtitle">Ações da Liga Piquetense de Combate ao Câncer</h2>
+                    <p class="info">A Liga Piquetense de Combate ao Câncer é uma sociedade civil sem fins lucrativos e
+                        se
+                        destina a
+                        prestação de benefícios assistenciais e sociais a portadores de câncer.<br> Eventualmente, a
+                        Liga
+                        realiza atividades com fins lucrativos para angariar fundos, que são destinados e revertidos
+                        para o
+                        fundo social, que permite a continuidade do projeto e auxílio eficiente para todos aqueles que
+                        necessitam deste trabalho. Em alguns casos, também são realizadas parcerias com outras
+                        instituições
+                        para arrecadar fundos, desde que seja aprovado em Assembleia e lavrado em ATA.</p>
+                </div>
+            </div>
+
+            <div class="section" id="section-activities">
+                <div class="imgArea">
+                    <img src="{% static 'img\img3.jpg' %}" alt="">
+                </div>
+                <div class="history">
+                    <h2 class="subtitle">Outras atividades realizadas</h2>
+                    <ul>
+                        <li>Fornecimento de medicamentos que não são encontrados nas redes;</li>
+                        <li>Fornecimento de frutas e legumes semanalmente, para dieta apropriada durante tratamento;</li>
+                        <li>Fornecimento de suplementos alimentares;</li>
+                        <li>Fornecimento de nutrição alimentar parenteral e enteral (por sonda);</li>
+                        <li>Fornecimento de fraldas geriátricas;</li>
+                        <li>Auxílio financeiro para pacientes e acompanhantes que realizam tratamentos em outros
+                            municípios;
+                        </li>
+                        <li>Pagamentos de consultas médicas em centros especializados de oncologia, para agilizar os
+                            procedimentos, assim sendo seu diagnóstico rápido enquanto aguardam na fila do CROSS e da
+                            rede
+                            HEBE CAMARGO;</li>
+                        <li>Pagamento para realização de exames laboratoriais, tomografias e outros de devido às
+                            urgências
+                            necessárias.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section" id="section-act">
+                <div class="imgArea">
+                    <img src="{% static 'img/image2.jpg' %}" alt="">
+                </div>
+                <div class="history">
+                    <h2 class="subtitle">Quem atua na Liga Piquetense de Combate ao Câncer</h2>
+                    <p class="info">A Liga Piquetense de Combate ao Câncer é composta por: Sócios Fundadores
+                        Voluntários;
+                        Sócios Efetivos
+                        Voluntários; Sócios Cooperadores Voluntários.
+                    </p>
+                    <ul>
+                        <li><b>Sócios Fundadores Voluntários:</b> são aqueles que participaram da primeira reunião da
+                            instituição e
+                            que contribuíram com a primeira mensalidade do mês de agosto de 2000. Poderão ser ainda
+                            denominados como sócios efetivos desde que venham a participar assiduamente da Liga. </li>
+                        <li> <b>Sócios Efetivos Voluntários:</b> são os sócios fundadores ou posteriormente admitidos
+                            que se
+                            disponham espontaneamente a aceitar o estatuto e regimento interno, e que contribuírem com
+                            as
+                            atividades e pagamentos das mensalidades a serem fixados pela Diretoria.</li>
+                        <li>
+                            <b>Sócios Cooperadores Voluntários:</b> são os simpatizantes que queiram colaborar com a
+                            Liga
+                            Piquetense de Combate ao Câncer, podendo contribuir financeiramente através de mensalidades
+                            ou
+                            doações, ou ainda participar das atividades sociais da Liga.
+                        </li>
+                        <li>Todas as sanções impostas aos sócios serão devidamente registradas e valem como prova legal.
+                        </li>
+                        <li>Referente ao conselho da Liga Piquetense de combate ao câncer todos os cargos serão
+                            exercidos
+                            sem remuneração e, no caso de dissolução da Liga Piquetense de Combate ao Câncer, o
+                            remanescente
+                            de seu patrimônio será doado a uma instituição congênere, a juízo da Assembleia Geral.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <button class="btn-redes-sociais">Instagram</button>
+        <button class="btn-redes-sociais">Facebook</button>
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+/* Estilização Global */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Paleta de Cores */
+
+:root {
+    --azulClaro: #64A2CF;
+    --azulEscuro: #38609B;
+    --branco: #fff;
+    --cinza: #EEEEEF;
+    --preto: #000;
+    --rosa: #E061A9;
+    --roxo: #350962;
+}
+
+/* Estilização Header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--roxo);
+    padding: 0% 5% 0 0;
+}
+
+header div {
+    max-width: 150px;
+    text-align: center;
+}
+
+header div img {
+    width: 100%;
+    cursor: pointer;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: var(--branco);
+}
+
+header ul a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+header ul a:hover {
+    opacity: 0.85;
+}
+
+header ul li {
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+/* Menu Toogle */
+
+/* Estilos para o menu toggle */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.menu-toggle-icon {
+    width: 30px;
+    height: 3px;
+    background-color: var(--rosa);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: relative;
+    transform-origin: center;
+}
+
+.menu-toggle-icon:before,
+.menu-toggle-icon:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: var(--rosa);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    left: 0;
+}
+
+.menu-toggle-icon:before {
+    top: -8px;
+}
+
+.menu-toggle-icon:after {
+    top: 8px;
+}
+
+.menu-toggle.active .menu-toggle-icon {
+    background-color: transparent;
+}
+
+.menu-toggle.active .menu-toggle-icon:before {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: var(--branco);
+}
+
+.menu-toggle.active .menu-toggle-icon:after {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: var(--branco);
+}
+
+/* Estilos para o menu lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: var(--rosa);
+    transition: left 0.3s ease;
+}
+
+.sidebar.active {
+    left: 0;
+    padding: 50px 0 0 0;
+    background-color: var(--rosa);
+}
+
+.navs {
+    padding-top: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0 0 15px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para dispositivos com largura máxima de 768px (tablets e smartphones em modo paisagem) */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 0% 2%;
+        justify-content: center;
+    }
+
+    header div {
+        max-width: 100px;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    header ul li {
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin: 10px 16px;
+    }
+}
+
+/* Estilos para dispositivos com largura máxima de 576px (smartphones em modo retrato) */
+@media only screen and (max-width: 576px) {
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul li {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,133 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torne - Se Voluntário</title>
+
+    <!-- Favicon Page -->
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Css Header -->
+    <link rel="stylesheet" href="{% static 'css/layout/header.css' %}">
+
+    <!-- Css Footer -->
+    <link rel="stylesheet" href="{% static 'css/layout/footer.css' %}">
+
+    <!-- Css Página -->
+    <link rel="stylesheet" href="{% static 'css/pages/voluntario.css' %}">
+
+    <!-- Css Bootstrap -->
+    <link href="{%static 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' %}" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{%static 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' %}">
+      
+    <!-- Css Página -->
+    <link rel="stylesheet" href="{%static 'css/pages/index.css' %}">
+    
+    </head>
+
+<body>
+    <header>
+        <div id="logo-area">
+            <img src="{% static 'img/logo.png' %}" id="logo">
+        </div>
+
+        <ul>
+            <a href="index">
+                <li class="nav-item">Home</li>
+            </a>
+            <a href="sobre">
+                <li class="nav-item">Sobre</li>
+            </a>
+            <a href="equipe">
+                <li class="nav-item">Equipe</li>
+            </a>
+            <a href="doacoes_necessarias">
+                <li class="nav-item">Doações Necessárias</li>
+            </a>
+            <a href="voluntario">
+                <li class="nav-item">Torne-se Voluntário</li>
+            </a>
+            <a href="ajude">
+                <li class="nav-item">Ajude</li>
+            </a>
+        </ul>
+    </header>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <div class="menu-toggle-icon"></div>
+    </button>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="navs">
+            <li><a href="../index" class="nav-item">Home</a></li>
+            <li><a href="sobre" class="nav-item">Sobre</a></li>
+            <li><a href="equipe" class="nav-item">Equipe</a></li>
+            <li><a href="#" class="nav-item">Doações Necessárias</a></li>
+            <li><a href="voluntario" class="nav-item">Torne-se Voluntário</a></li>
+            <li><a href="ajude" class="nav-item">Ajude</a></li>
+        </ul>
+    </div>
+
+    <section id="infoArea">
+        <div class="message" style='text-align:center'>
+
+            <div class="titleReception">
+                <h2>Cadastro de Voluntários</h2>
+            </div>
+
+            <div>
+
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Cadastrar Voluntário(a) no Sistema!</button>                
+                </form>
+            
+            </div>
+            
+            <br>
+            <br>
+            <br>
+
+            <div class="titleReception">
+                <h2>Lista de Voluntários do Projeto</h2>
+            </div>
+
+            <div>
+            {% for voluntarios in voluntarios %}
+            <br>
+            <ul>
+            <li>Nome do Voluntário (a): {{voluntarios.nome_do_voluntario}}</li>
+            <li>Email : {{voluntarios.Email}}</li>
+            <li>Celular : {{voluntarios.Celular}}</li>
+            <li>Dias de Atuação: {{voluntarios.Dias_disponiveis_para_atuar}}</li>
+            <li>Atividades no Projeto: {{voluntarios.Atividades_que_gostaria_de_executar}}</li>
+            </ul>
+            <br>
+            {% endfor %}
+            </div>    
+        </div>
+
+            
+        </div>
+    </section>
+
+<!--     <main>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdQpfDU45isA6IutEAT7wiBgsdBOuK6dUr7kzEM-v-7H9RluA/viewform?embedded=true"
+            width="640" height="1598" frameborder="0" marginheight="0" marginwidth="0">A carregar…</iframe>
+    </main> -->
+
+    <footer>
+        <button class="btn-redes-sociais">Instagram</button>
+        <button class="btn-redes-sociais">Facebook</button>
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
