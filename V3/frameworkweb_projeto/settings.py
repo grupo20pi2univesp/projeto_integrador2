@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-ufs=jfsjdf=x(w0u-iz4jy*4caig&$_buk%+u0ir40i=e!5vz&
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app','.now.sh']
 #ALLOWED_HOSTS = ['*']
 
 
@@ -61,19 +61,19 @@ WSGI_APPLICATION = 'frameworkweb_projeto.wsgi.app'
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static\css'),
-    os.path.join(BASE_DIR, 'static\favicon'),
-    os.path.join(BASE_DIR, 'static\img'),
-    os.path.join(BASE_DIR, 'static\js'),
-    os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, "frameworkweb_projeto\static"),
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static\css'),
+#    os.path.join(BASE_DIR, 'static\favicon'),
+#    os.path.join(BASE_DIR, 'static\img'),
+#    os.path.join(BASE_DIR, 'static\js'),
+#    os.path.join(BASE_DIR, 'static'),
+#    os.path.join(BASE_DIR, "frameworkweb_projeto\static"),
     # '/var/www/static/',
-    ]
-
+#    ]
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 #DATABASES = {
 #    'default': {
