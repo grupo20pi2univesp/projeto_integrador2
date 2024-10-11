@@ -1,0 +1,108 @@
+/* Estilização Global */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Paleta de Cores */
+
+:root {
+    --azulClaro: #64A2CF;
+    --azulEscuro: #38609B;
+    --branco: #fff;
+    --cinza: #EEEEEF;
+    --preto: #000;
+    --rosa: #E061A9;
+    --roxo: #350962;
+}
+
+/* Estilização Main */
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 5%;
+    width: 100%;
+}
+
+main .infoMaps {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+main .infoMaps p {
+    font-size: 20px;
+    color: var(--azulEscuro);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    text-align: justify;
+}
+
+main .infoMaps span {
+    font-size: 20px;
+    color: var(--azulEscuro);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+main .infoPix {
+    max-width: 40%;
+}
+
+main .infoPix .imgPix {
+    max-width: 300px;
+}
+
+main .infoPix .imgPix img {
+    width: 100%;
+}
+
+main .infoPix p {
+    font-size: 16px;
+    color: var(--azulEscuro);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+/* Responsividade */
+
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    main .infoMaps {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    main .infoPix {
+        max-width: 70%;
+    }
+}

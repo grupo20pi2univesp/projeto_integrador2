@@ -1,0 +1,41 @@
+/* Estilização Global */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Paleta de Cores */
+
+:root {
+    --azulClaro: #64A2CF;
+    --azulEscuro: #38609B;
+    --branco: #fff;
+    --cinza: #EEEEEF;
+    --preto: #000;
+    --rosa: #E061A9;
+    --roxo: #350962;
+}
+
+/* Estilização Main */
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 3%;
+}

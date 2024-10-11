@@ -1,0 +1,49 @@
+/* Estilização Global */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Paleta de Cores */
+
+:root {
+    --azulClaro: #64A2CF;
+    --azulEscuro: #38609B;
+    --branco: #fff;
+    --cinza: #EEEEEF;
+    --preto: #000;
+    --rosa: #E061A9;
+    --roxo: #350962;
+}
+
+/* Estilização Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--roxo);
+    flex-wrap: wrap;
+}
+
+footer .btn-redes-sociais {
+    background-color: var(--rosa);
+    color: var(--branco);
+    border: none;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+footer .btn-redes-sociais:hover {
+    opacity: 0.94;
+}
