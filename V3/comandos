@@ -14,7 +14,7 @@ Acessar Index: http://127.0.0.1:8000/index
 
 Acessar Django Admin: http://127.0.0.1:8000/admin
 
+pip freeze > requirements.txt
+
 User: admin
 Senha: 1234
-
-pip list --format=freeze > requirements.txt
