@@ -1,0 +1,249 @@
+/* Estilização Global */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Paleta de Cores */
+
+:root {
+    --azulClaro: #64A2CF;
+    --azulEscuro: #38609B;
+    --branco: #fff;
+    --cinza: #EEEEEF;
+    --preto: #000;
+    --rosa: #E061A9;
+    --roxo: #350962;
+}
+
+/* Estilização Banner */
+
+#bannerArea {
+    width: 100%;
+    padding: 1.5% 4%;
+    background-image: linear-gradient(to right, var(--rosa), #b776b6, #4297d0, var(--azulClaro));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#bannerArea .title {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#bannerArea .title h1 {
+    color: var(--branco);
+    font-size: 36px;
+    font-style: italic;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+#bannerArea .title .hashtags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#bannerArea .title .hashtags p {
+    color: var(--branco);
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+#bannerArea .imgArea {
+    max-width: 120px;
+}
+
+#bannerArea .imgArea img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilização Informações do Site */
+
+#infoArea {
+    width: 100%;
+    padding: 2.6%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 30px;
+}
+
+/* Carousel de Imagens */
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--branco);
+    z-index: 1;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Fim do Carousel */
+
+#infoArea .imgArea {
+    max-width: 400px;
+}
+
+#infoArea .imgArea img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+#infoArea .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#infoArea .message .titleReception {
+    width: 100%;
+    text-align: center;
+}
+
+#infoArea .message .titleReception h2 {
+    color: var(--azulClaro);
+    font-size: 32px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+#infoArea .message .text {
+    padding: 20px;
+    background-color: var(--azulClaro);
+    border-radius: 3px;
+    width: 100%;
+    max-width: 600px;
+}
+
+#infoArea .message .text p {
+    color: var(--branco);
+    text-align: justify;
+    font-size: 22px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+/* Estilos para dispositivos com largura máxima de 768px (tablets e smartphones em modo paisagem) */
+@media only screen and (max-width: 768px) {
+
+    #bannerArea .title h1 {
+        font-size: 28px;
+    }
+
+    #bannerArea .title .hashtags p {
+        font-size: 16px;
+    }
+
+    #infoArea {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #infoArea .carousel-container {
+        max-width: 300px;
+    }
+
+    #infoArea .imgArea {
+        max-width: 300px;
+    }
+
+    #infoArea .message .titleReception h2 {
+        font-size: 28px;
+    }
+
+    #infoArea .message .text {
+        padding: 10px;
+    }
+
+    #infoArea .message .text p {
+        font-size: 18px;
+    }
+}
+
+/* Estilos para dispositivos com largura máxima de 576px (smartphones em modo retrato) */
+@media only screen and (max-width: 576px) {
+
+    #bannerArea .title {
+        text-align: center;
+    }
+
+    #bannerArea .title h1 {
+        font-size: 24px;
+    }
+
+    #bannerArea .title .hashtags {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #bannerArea .title .hashtags p {
+        font-size: 14px;
+    }
+
+    #infoArea {
+        padding: 5%;
+    }
+
+    #infoArea .carousel-container {
+        max-width: 250px;
+    }
+
+    #infoArea .imgArea {
+        max-width: 250px;
+    }
+
+    #infoArea .message .titleReception h2 {
+        font-size: 24px;
+    }
+
+    #infoArea .message .text {
+        padding: 5px;
+    }
+
+    #infoArea .message .text p {
+        font-size: 16px;
+    }
+}
