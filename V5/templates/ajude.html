@@ -1,0 +1,123 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajude</title>
+
+    <!-- Favicon Page -->
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Css Header -->
+    <link rel="stylesheet" href="{% static 'css/layout/header.css' %}">
+
+    <!-- Css Footer -->
+    <link rel="stylesheet" href="{% static 'css/layout/footer.css' %}">
+
+    <!-- Css Página -->
+    <link rel="stylesheet" href="{% static 'css/pages/ajude.css' %}">
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/map.js' %}"></script>
+    <!-- API do Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+
+<body>
+    <header>
+
+        <div id="logo-area">
+            <img src="{% static 'img/logo.png' %}" id="logo">
+        </div>
+
+        <ul>
+            <a href="index">
+                <li class="nav-item">Home</li>
+            </a>
+            <a href="noticias">
+                <li class="nav-item">Notícias</li>
+            </a>
+            <a href="sobre">
+                <li class="nav-item">Sobre</li>
+            </a>
+            <a href="equipe">
+                <li class="nav-item">Equipe</li>
+            </a>
+            <a href="doacoes">
+                <li class="nav-item">Doações</li>
+            </a>
+            <a href="voluntario">
+                <li class="nav-item">Torne-se Voluntário</li>
+            </a>
+            <a href="atendidos">
+                <li class="nav-item">Atendidos</li>
+            </a>
+            <a href="ajude">
+                <li class="nav-item">Ajude</li>
+            </a>
+            <a href="infouteis">
+                <li class="nav-item">Informações Úteis</li>
+            </a>
+            
+        </ul>
+    </header>
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <div class="menu-toggle-icon"></div>
+    </button>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="navs">
+            <li><a href="#" class="nav-item">Home</a></li>
+            <li><a href="noticias" class="nav-item">Noticias</a></li>
+            <li><a href="sobre" class="nav-item">Sobre</a></li>
+            <li><a href="equipe" class="nav-item">Equipe</a></li>
+            <li><a href="doacoes" class="nav-item">Doações</a></li>
+            <li><a href="voluntario" class="nav-item">Torne-se Voluntário</a></li>
+            <li><a href="atendidos" class="nav-item">Atendidos</a></li>
+            <li><a href="ajude" class="nav-item">Ajude</a></li>
+            <li><a href="infouteis" class="nav-item">Informações Úteis</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="infoMaps">
+            <p class="acessi">A Liga Piquetense de Combate ao Câncer é uma organização sem fins lucrativos que depende de doações para continuar suas atividades. 
+                Contamos com uma conta PIX! Doe e ajude-nos a continuar unindo forças para combater o câncer! As doações podem ser feitas diretamente para alguma das voluntárias ou pelo PIX.</p>
+            <span>Telefone: (12) 98106-3527 </span>
+            <span>Endereço: Praça Duque de Caxias, nº9, ao lado do Terrana - Piquete/SP.</span>
+            <img src="{% static 'img/foto_sede_liga.jpg' %}" alt="">
+
+        </div>
+        <div class="infoPix">
+            <div class="imgPix">
+                <img src="{% static 'img/pix.png' %}">
+            </div>
+            <p class="acessi">Chave Pix: 12 99704-0497</p>
+            <p class="acessi">Nome: Vera Lucia</p>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+        <p>
+        <a class="btn-redes-sociais" href="#" role="button">Instagram</a>
+        <a class="btn-redes-sociais" href="https://www.facebook.com/profile.php?id=100075741554563" role="button">Facebook</a>
+        <a class="btn-redes-sociais" href="newsletter" role="button">Cadastre na Newsletter!</a>
+        </p>
+        <br>
+        <p>
+        <button type="button" class="btn-redes-sociais" name="btn1" onclick="changeSizeByBtn('15px')">-A</button>
+        <button type="button" class="btn-redes-sociais" name="btn1" onclick="changeSizeByBtn('22px')">A</button>
+        <button type="button" class="btn-redes-sociais" name="btn3" onclick="changeSizeByBtn('30px')">A+</button>
+        </p>
+    </div>
+    </footer>
+
+    <script src="{% static 'js/fonte.js' %}"></script>
+
+</body>
+
+</html>

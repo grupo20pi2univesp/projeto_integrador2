@@ -1,0 +1,233 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias</title>
+
+    <!-- Favicon Page -->
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Css Header -->
+    <link rel="stylesheet" href="{% static 'css/layout/header.css' %}">
+
+    <!-- Css Footer -->
+    <link rel="stylesheet" href="{% static 'css/layout/footer.css' %}">
+
+    <!-- Css Página -->
+    <link rel="stylesheet" href="{% static 'css/pages/sobre.css' %}">
+</head>
+
+<body>
+    <header>
+
+       <div id="logo-area">
+            <img src="{% static 'img/logo.png' %}" id="logo">
+        </div>
+
+        <ul>
+            <a href="index">
+                <li class="nav-item">Home</li>
+            </a>
+            <a href="noticias">
+                <li class="nav-item">Notícias</li>
+            </a>
+            <a href="sobre">
+                <li class="nav-item">Sobre</li>
+            </a>
+            <a href="equipe">
+                <li class="nav-item">Equipe</li>
+            </a>
+            <a href="doacoes">
+                <li class="nav-item">Doações</li>
+            </a>
+            <a href="voluntario">
+                <li class="nav-item">Torne-se Voluntário</li>
+            </a>
+            <a href="atendidos">
+                <li class="nav-item">Atendidos</li>
+            </a>
+            <a href="ajude">
+                <li class="nav-item">Ajude</li>
+            </a>
+            <a href="infouteis">
+                <li class="nav-item">Informações Úteis</li>
+            </a>
+            
+        </ul>
+    </header>
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <div class="menu-toggle-icon"></div>
+    </button>
+
+    <div class="sidebar" id="sidebar">
+        <ul class="navs">
+            <li><a href="#" class="nav-item">Home</a></li>
+            <li><a href="noticias" class="nav-item">Noticias</a></li>
+            <li><a href="sobre" class="nav-item">Sobre</a></li>
+            <li><a href="equipe" class="nav-item">Equipe</a></li>
+            <li><a href="doacoes" class="nav-item">Doações</a></li>
+            <li><a href="voluntario" class="nav-item">Torne-se Voluntário</a></li>
+            <li><a href="atendidos" class="nav-item">Atendidos</a></li>
+            <li><a href="ajude" class="nav-item">Ajude</a></li>
+            <li><a href="infouteis" class="nav-item">Informações Úteis</a></li>
+        </ul>
+    </div>
+    </div>
+
+    <main>
+        
+        <div class="title">
+            <h1>Notícias da Liga Piquetense de Combate ao Câncer</h1>
+        </div>
+
+        <div class="all">
+
+            <div class="section" id="fb1">
+                <div class="imgArea">
+                    <img src="{% static 'img/fb/fb1.jpg' %}" alt="">
+                </div>
+                <div class="history">
+                    <h2 class="subtitle">Caminhada pela Vida | 24 de Novembro | 09 Horas</h2>
+                    <p class="acessi">   
+                    Junte-se a nós da Liga Piquetense de Combate ao Câncer em uma caminhada especial para apoiar aqueles que estão enfrentando o câncer em nossa comunidade! 
+                    <br><br>
+                    Adquira nossa camiseta por R$ 40,00 e venha fazer parte deste movimento de solidariedade e amor. 
+                    <br><br>
+                    Todo o lucro será revertido diretamente para o tratamento dos assistidos, ajudando no custeio de remédios, consultas e outros cuidados essenciais. 
+                    <br><br>
+                    Esteja presente conosco e  participe do sorteio. 
+                    <br><br>
+                    Teremos corte de cabelo ,aferição de pressão e glicemia. 
+                    <br><br>
+                    Data: 24 de Novembro
+                    <br><br>
+                    Local: Praça Duque de Caxias, Centro - Piquete/SP  
+                    <br><br>
+                    Horário: 09:00hrs
+                    <br><br>
+                    Cada passo e cada camiseta representam um apoio fundamental para quem precisa. 
+                    <br><br>
+                    Vista essa causa, caminhe conosco e faça a diferença!
+                    <br><br>
+                    Como comprar? Com as voluntárias da Liga ou em nosso Bazar!
+                    </p>
+                </div>
+            </div>
+
+            <hr width="100%" size="2">
+
+            <div class="all">
+                <center>
+                <div id="fb2">
+                    <div class="imgArea">
+                        <img src="{% static 'img/fb/fb2.jpg' %}" alt="">
+                    </div>
+                </div>
+                </center>
+            </div>
+
+            <hr width="100%" size="2">
+
+            <div class="all">
+                <center>
+                <div id="fb3">
+                    <div class="imgArea">
+                        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100075741554563%2Fvideos%2F527827290213659%2F&show_text=false&width=267&t=0" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                    </div>
+                </div>
+                </center>
+            </div>
+
+            <hr width="100%" size="2">
+
+            <div class="section" id="fb4">
+                <div class="imgArea">
+                    <img src="{% static 'img/fb/fb3.jpg' %}" alt="">
+                </div>
+                <div class="history">
+                    <h2 class="subtitle">A Luta Contra o Câncer!</h2>
+                    <p class="acessi">   
+                        A luta contra o câncer de mama e de próstata envolve a conscientização sobre a importância da prevenção e o diagnóstico precoce. 
+                        <br><br>
+                        Para isso, é possível adotar hábitos saudáveis e realizar exames clínicos e laboratoriais: 
+                        <br><br>
+                        <ul>
+                        <li>Praticar atividade física regularmente </li>
+                        <li>Manter um peso corporal adequado </li>
+                        <li>Ter uma alimentação equilibrada, com frutas, legumes, cereais integrais e proteínas com baixo teor de gordura </li>
+                        <li>Evitar o consumo de bebidas alcoólicas e o tabagismo </li>
+                        <li>Realizar exames clínicos e laboratoriais </li>
+                        <li>Consultar um médico regularmente </li>
+                        </ul>
+                        <br><br>
+                        O Outubro Rosa e o Novembro Azul são campanhas internacionais que alertam para a prevenção do câncer de mama e de próstata, respectivamente. 
+                        <br><br>
+                        Quando detectados em estágios iniciais, ambos os cânceres têm altas chances de cura, com taxas de sucesso de 90% a 95%. 
+                        <br><br>
+                        Para quem tem histórico familiar de câncer de mama ou de próstata, os exames podem ser recomendados em idades mais jovens. 
+                        <br><br>
+                    </div>
+            </div>
+
+            <hr width="100%" size="2">
+
+            <div class="section" id="fb4">
+                <div class="imgArea">
+                    <img src="{% static 'img/fb/fb5.jpg' %}" alt="">
+                </div>
+                <div class="history">
+                    <h2 class="subtitle">Outubro Rosa: A Luta Pela Vida Continua </h2>
+                    <p class="acessi">   
+                        Em setembro, a carreta de mamografia esteve em nossa cidade, oferecendo mais de 500 exames gratuitos à população. 
+                        <br><br>
+                        Agora, durante o Outubro Rosa, a Liga Piquetense de Combate ao Câncer reforça a importância de seguir cuidando da saúde e se prevenindo contra o câncer de mama.
+                        <br><br>
+                        Previna-se: Continue fazendo o autoexame regularmente e, se ainda não fez sua mamografia, busque orientação médica. 
+                        <br><br>
+                        Informe-se: Conheça os sinais de alerta e a importância do diagnóstico precoce.
+                        <br><br>
+                        Compartilhe: Espalhe essa mensagem para mais mulheres, ajudando a fortalecer nossa rede de apoio e conscientização.
+                        <br><br>
+                        A prevenção é a nossa melhor aliada na luta contra o câncer de mama!
+                        <br><br>
+                    </div>
+            </div>
+            <hr width="100%" size="2">
+
+            <div class="all">
+                <center>
+                <div id="fb3">
+                    <div class="imgArea">
+                        <iframe src="https://www.facebook.com/plugins/video.php?height=306&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F946341327536829%2F&show_text=true&width=560&t=0" width="560" height="421" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>                </div>
+                </center>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div>
+        <p>
+        <a class="btn-redes-sociais" href="#" role="button">Instagram</a>
+        <a class="btn-redes-sociais" href="https://www.facebook.com/profile.php?id=100075741554563" role="button">Facebook</a>
+        <a class="btn-redes-sociais" href="newsletter" role="button">Cadastre na Newsletter!</a>
+        </p>
+        <br>
+        <p>
+        <button type="button" class="btn-redes-sociais" name="btn1" onclick="changeSizeByBtn('15px')">-A</button>
+        <button type="button" class="btn-redes-sociais" name="btn1" onclick="changeSizeByBtn('22px')">A</button>
+        <button type="button" class="btn-redes-sociais" name="btn3" onclick="changeSizeByBtn('30px')">A+</button>
+        </p>
+    </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/fonte.js' %}"></script>
+
+</body>
+
+</html>

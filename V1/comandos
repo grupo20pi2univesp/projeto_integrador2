@@ -1,6 +1,8 @@
+conda remove --name pi2grupo20--all
+
 conda create --name pi2grupo20
 
-source activate pi2grupo20
+conda activate pi2grupo20
 
 conda install pip
 
